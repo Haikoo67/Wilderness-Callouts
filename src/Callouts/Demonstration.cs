@@ -119,7 +119,7 @@
                 if (Game.IsKeyDown(Keys.D1))
                 {
                     decision = EDecision.Wait;
-                    Game.DisplaySubtitle("~b~You:~s~ We should wait and see what they do", 5000);
+                    Game.DisplaySubtitle("~b~You:~s~ Nous devrions attendre et voir ce qu'ils font", 5000);
                     Logger.LogTrivial(this.GetType().Name, "Decision: " + decision);
                     GameFiber.Sleep(1500);
                     state = EDemonstrationStates.DecisionMade;
@@ -127,7 +127,7 @@
                 else if (Game.IsKeyDown(Keys.D2))
                 {
                     decision = EDecision.TearGas;
-                    Game.DisplaySubtitle("~b~You:~s~ We should throw tear gas", 5000);
+                    Game.DisplaySubtitle("~b~You:~s~ On devrait jeter des gaz lacrymogènes", 5000);
                     Logger.LogTrivial(this.GetType().Name, "Decision: " + decision);
                     GameFiber.Sleep(1500);
                     state = EDemonstrationStates.DecisionMade;
@@ -135,7 +135,7 @@
                 else if (Game.IsKeyDown(Keys.D3))
                 {
                     decision = EDecision.UseShotguns;
-                    Game.DisplaySubtitle("~b~You:~s~ We should use our shotguns", 5000);
+                    Game.DisplaySubtitle("~b~You:~s~ Nous devrions utiliser nos fusils de chasse", 5000);
                     Logger.LogTrivial(this.GetType().Name, "Decision: " + decision);
                     GameFiber.Sleep(1500);
                     state = EDemonstrationStates.DecisionMade;
@@ -143,7 +143,7 @@
                 else if (Game.IsKeyDown(Keys.D4))
                 {
                     decision = EDecision.TryDisperse;
-                    Game.DisplaySubtitle("~b~You:~s~ I'm gonna try to disperse them", 5000);
+                    Game.DisplaySubtitle("~b~You:~s~ Je vais essayer de les disperser", 5000);
                     Logger.LogTrivial(this.GetType().Name, "Decision: " + decision);
                     GameFiber.Sleep(1500);
                     state = EDemonstrationStates.DecisionMade;
@@ -175,7 +175,7 @@
                                     {
                                         if (Globals.Random.Next(101) >= 50)
                                         {
-                                            Game.DisplaySubtitle("~b~Protester:~s~ Fuck you all!", 7000);
+                                            Game.DisplaySubtitle("~b~Protester:~s~ Allez tous vous faire foutre !", 7000);
                                             spawnUsed.Civilians.GetRandomElement().Tasks.FightAgainst(Globals.Random.Next(4) <= 2 ? spawnUsed.Police.GetRandomElement() : Game.LocalPlayer.Character);
                                         }
                                         else
